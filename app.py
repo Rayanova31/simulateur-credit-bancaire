@@ -24,6 +24,11 @@ def predire_risque(age, montant, duree):
         return "❌ Risque Élevé : Profil à risque. Crédit Refusé !"
 
 # 3. Création de l'interface visuelle Gradio
+profils_types = [
+    [22, 12000, 48],  # Profil 1 : Jeune étudiant, gros prêt très long -> Risqué !
+    [45, 2000, 12],   # Profil 2 : Cadre expérimenté, petit prêt court -> Sécurisé
+    [32, 5000, 24]    # Profil 3 : Le client moyen standard
+]
 interface = gr.Interface(
     fn = predire_risque, # La fonction à appeler quand on clique
     inputs=[
@@ -34,6 +39,7 @@ interface = gr.Interface(
     outputs=gr.Textbox(label="Décision de l'Intelligence Artificielle"),
     title="💳 Simulateur d'Octroi de Crédit Bancaire",
     description="Ce simulateur utilise l'IA pour évaluer le risque d'un dossier client."
+    examples=profils_types
 )
 
 # 4. Lancement avec création d'un lien public (share=True)
