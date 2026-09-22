@@ -38,7 +38,7 @@ interface = gr.Interface(
     ],
     outputs=gr.Textbox(label="Décision de l'Intelligence Artificielle"),
     title="💳 Simulateur d'Octroi de Crédit Bancaire",
-    description="Ce simulateur utilise l'IA pour évaluer le risque d'un dossier client."
+    description="Ce simulateur utilise l'IA pour évaluer le risque d'un dossier client.",
     examples=profils_types
 )
 
