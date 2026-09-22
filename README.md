@@ -3,7 +3,7 @@ title: Simulateur Credit Bancaire
 emoji: 💻
 colorFrom: blue
 colorTo: blue
-sdk: static
+sdk: gradio
 pinned: false
 license: mit
 ---
