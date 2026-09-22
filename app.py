@@ -37,4 +37,4 @@ interface = gr.Interface(
 )
 
 # 4. Lancement avec création d'un lien public (share=True)
-interface.launch(share=True)
+interface.launch(server_name="0.0.0.0", server_port=10000)
